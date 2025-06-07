@@ -22,7 +22,8 @@ export class AuthorRepository extends BaseRepositoryImpl<AuthorDocument> {
     return this.authorModel.find({ active: true }).sort({ name: 1 }).exec();
   }
 
-  async searchByText(searchTerm: string, limit: number = 20): Promise<AuthorDocument[]> {
+  // Renombrar el método para evitar conflicto con la clase base
+  async searchAuthorsByText(searchTerm: string, limit: number = 20): Promise<AuthorDocument[]> {
     return this.authorModel
       .find({
         name: { $regex: searchTerm, $options: 'i' },

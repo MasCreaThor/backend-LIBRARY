@@ -1,5 +1,5 @@
- // src/modules/resource/services/management/author.service.ts
- import {
+// src/modules/resource/services/management/author.service.ts
+import {
     Injectable,
     ConflictException,
     NotFoundException,
@@ -64,7 +64,8 @@
     }
   
     async searchByText(searchTerm: string, limit: number = 20): Promise<AuthorResponseDto[]> {
-      const authors = await this.authorRepository.searchByText(searchTerm, limit);
+      // Actualizar para usar el nuevo nombre del método
+      const authors = await this.authorRepository.searchAuthorsByText(searchTerm, limit);
       return authors.map(author => this.mapToResponseDto(author));
     }
   

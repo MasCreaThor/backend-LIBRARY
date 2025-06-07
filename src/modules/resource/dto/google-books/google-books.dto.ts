@@ -33,5 +33,6 @@ export class GoogleBooksVolumeDto {
     thumbnail?: string;
     small?: string;
     medium?: string;
+    large?: string;
   };
 }

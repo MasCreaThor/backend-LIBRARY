@@ -9,7 +9,7 @@ import {
   import { AuthorService } from '@modules/resource/services/management/author.service';
   import { PublisherService } from '@modules/resource/services/management/publisher.service';
   import { GoogleBooksService } from './google-books.service';
-  import { ResourceTypeRepository } from '@modules/resource/repositories';
+  import { ResourceTypeRepository, ResourceStateRepository } from '@modules/resource/repositories';
   import { LoggerService } from '@shared/services/logger.service';
   import {
     ResourceFromGoogleBooksDto,
@@ -30,6 +30,7 @@ import {
       private readonly publisherService: PublisherService,
       private readonly googleBooksService: GoogleBooksService,
       private readonly resourceTypeRepository: ResourceTypeRepository,
+      private readonly resourceStateRepository: ResourceStateRepository, // Agregar el repositorio correcto
       private readonly logger: LoggerService,
     ) {
       this.logger.setContext('GoogleBooksResourceService');
@@ -84,8 +85,8 @@ import {
           throw new BadRequestException('Tipo de recurso "book" no encontrado');
         }
   
-        // Obtener el estado "bueno" por defecto
-        const goodState = await this.resourceTypeRepository.findByName('good');
+        // Obtener el estado "bueno" por defecto - CORREGIR: usar resourceStateRepository
+        const goodState = await this.resourceStateRepository.findByName('good');
         if (!goodState) {
           throw new BadRequestException('Estado de recurso "good" no encontrado');
         }
