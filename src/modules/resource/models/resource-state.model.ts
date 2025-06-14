@@ -51,4 +51,3 @@ export const ResourceStateSchema = SchemaFactory.createForClass(ResourceState);
 
 // Índices para optimización
 ResourceStateSchema.index({ active: 1 });
-ResourceStateSchema.index({ name: 1 });

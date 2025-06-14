@@ -50,4 +50,3 @@ export const LoanStatusSchema = SchemaFactory.createForClass(LoanStatus);
 
 // Índices para optimización
 LoanStatusSchema.index({ active: 1 });
-LoanStatusSchema.index({ name: 1 });

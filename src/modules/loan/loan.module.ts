@@ -38,8 +38,8 @@ import { LoanSeedService } from './seeds/loan-seed.service';
 import { LoggerService } from '@shared/services';
 
 // Repositorios de otros módulos necesarios
-import { PersonRepository } from '@modules/person/repositories';
-import { Person, PersonSchema } from '@modules/person/models';
+import { PersonRepository, PersonTypeRepository } from '@modules/person/repositories';
+import { Person, PersonSchema, PersonType, PersonTypeSchema } from '@modules/person/models';
 import { ResourceRepository, ResourceStateRepository } from '@modules/resource/repositories';
 import { Resource, ResourceSchema, ResourceState, ResourceStateSchema } from '@modules/resource/models';
 
@@ -52,6 +52,7 @@ import { Resource, ResourceSchema, ResourceState, ResourceStateSchema } from '@m
       
       // Modelos de otros módulos necesarios para referencias
       { name: Person.name, schema: PersonSchema },
+      { name: PersonType.name, schema: PersonTypeSchema },
       { name: Resource.name, schema: ResourceSchema },
       { name: ResourceState.name, schema: ResourceStateSchema },
     ]),
@@ -74,6 +75,7 @@ import { Resource, ResourceSchema, ResourceState, ResourceStateSchema } from '@m
 
     // Repositorios de otros módulos
     PersonRepository,
+    PersonTypeRepository,
     ResourceRepository,
     ResourceStateRepository,
 

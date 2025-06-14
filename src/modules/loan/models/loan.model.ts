@@ -76,6 +76,17 @@ export class Loan extends Document {
   })
   returnedBy?: Types.ObjectId; // Usuario que registró la devolución
 
+  @Prop({
+    type: Types.ObjectId,
+    ref: 'User',
+  })
+  renewedBy?: Types.ObjectId; // Usuario que renovó el préstamo
+
+  @Prop({
+    type: Date,
+  })
+  renewedAt?: Date; // Fecha de la última renovación
+
   @Prop()
   createdAt!: Date;
 
@@ -99,15 +110,3 @@ export class Loan extends Document {
 
 export type LoanDocument = Loan & Document;
 export const LoanSchema = SchemaFactory.createForClass(Loan);
-
-// Índices para optimización
-LoanSchema.index({ personId: 1 });
-LoanSchema.index({ resourceId: 1 });
-LoanSchema.index({ statusId: 1 });
-LoanSchema.index({ loanDate: -1 });
-LoanSchema.index({ dueDate: 1 });
-LoanSchema.index({ returnedDate: 1 });
-
-// Índice compuesto para consultas frecuentes
-LoanSchema.index({ statusId: 1, dueDate: 1 });
-LoanSchema.index({ personId: 1, statusId: 1 });
