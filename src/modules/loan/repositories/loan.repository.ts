@@ -32,12 +32,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -76,12 +76,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -297,12 +297,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -345,12 +345,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -430,12 +430,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -487,7 +487,7 @@ export class LoanRepository {
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
@@ -531,7 +531,7 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'statusId', 
@@ -824,12 +824,12 @@ export class LoanRepository {
             { 
               path: 'personId', 
               select: 'firstName lastName documentNumber grade fullName',
-              populate: { path: 'personType', select: 'name description' }
+              populate: { path: 'personTypeId', select: 'name description' }
             },
             { 
               path: 'resourceId', 
               select: 'title isbn author available',
-              populate: { path: 'state', select: 'name description color' }
+              populate: { path: 'stateId', select: 'name description color' }
             },
             { 
               path: 'statusId', 
@@ -891,12 +891,12 @@ export class LoanRepository {
           { 
             path: 'personId', 
             select: 'firstName lastName documentNumber grade fullName',
-            populate: { path: 'personType', select: 'name description' }
+            populate: { path: 'personTypeId', select: 'name description' }
           },
           { 
             path: 'resourceId', 
             select: 'title isbn author available',
-            populate: { path: 'state', select: 'name description color' }
+            populate: { path: 'stateId', select: 'name description color' }
           },
           { 
             path: 'statusId', 
